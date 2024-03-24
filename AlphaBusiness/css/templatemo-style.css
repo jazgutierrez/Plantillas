@@ -6,6 +6,112 @@ https://templatemo.com/tm-520-highway
 
 */
 
+a.boton{
+	font-family: 'Montserrat', sans-serif;
+	text-transform:uppercase;
+	letter-spacing:5px;
+	display:inline-block;
+	text-decoration:none;
+	color:#fff;
+	padding:20px 40px;
+	border: 2px solid #fff;
+	border-radius:5px;
+	position:relative;
+	overflow:hidden;
+	transition: all ease 400ms;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+}
+
+a.boton span{
+	display:block;
+	position:absolute;
+	background: #414141;
+	transition: all ease 400ms;
+  -webkit-transition: all ease 400ms;
+  -moz-transition: all ease 400ms;
+  -ms-transition: all ease 400ms;
+	z-index:-1;
+}
+
+a.boton span.top{
+	left:0;
+	top:-50%;
+	right:0;
+	bottom:100%;
+	border-radius:50%;
+}
+
+a.boton span.left{
+	left:-20%;
+	top:0;
+	right:110%;
+	bottom:0;
+	transform:skewX(-30deg);
+}
+
+a.boton span.right{
+	left:100%;
+	top:0;
+	right:0;
+	bottom:0;
+}
+
+a.boton span.bottom{
+	left:0;
+	top:100%;
+	right:0;
+	bottom:0;
+}
+
+a.boton span.center{
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	width:50px;
+	height:50px;
+	border-radius:100px;
+	margin:auto;
+	transform:scale(0,0);
+	transition: all ease 500ms;
+  -webkit-transition: all ease 500ms;
+  -moz-transition: all ease 500ms;
+  -ms-transition: all ease 500ms;
+	z-index:-1;
+}
+
+a.boton:hover{
+	color:#fff;
+	border: 2px solid #414141;
+}
+
+a.boton:hover span.top{
+	top:0;
+	bottom:0;
+	border-radius:0;
+}
+
+a.boton:hover span.left{
+	right:-10%;
+}
+
+a.boton:hover span.right{
+	left:0;
+}
+
+a.boton:hover span.bottom{
+	top:0;
+}
+
+a.boton:hover span.center{
+	transform:scale(2,2);
+	width:200px;
+	height:200px;
+}
+
+
 body {
   font-family: 'Kanit', sans-serif;
 }
@@ -300,7 +406,7 @@ nav {
 
 #video-container .video-content .inner a {
   color: #fff;
-  text-decoration: underline;
+ /* text-decoration: underline;*/
 }
 
 #video-container .video-content .inner .scroll-icon {
@@ -761,8 +867,6 @@ footer a:hover {
  .grid-portfolio .load-more-button a:hover {
   color: rgba(250,250,250,0.5);
  }
-
-
 
 
  .services {
